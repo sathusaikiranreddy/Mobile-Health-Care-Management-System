@@ -11,31 +11,23 @@ public class ConnectDB {
 	static String username = "root";//username of my db
 	static String password ="Saikiran@1729";//password of my db plz dont tell to anyone :p
 	
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
-	/*	Scanner sc = new Scanner(System.in);
-		int docterId = sc.nextInt();
-		sc.nextLine();
-		String docterName = sc.nextLine();*/
+	public static Connection getconnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+	
 		Class.forName("com.mysql.jdbc.Driver").newInstance();//this will say to connect mysql
 		
 		con = DriverManager.getConnection(url,username,password);   //creating connection with database
-		// TODO Auto-generated method stub
+		
 		if(con!=null)
 		{
-			System.out.println(" connected");
+			System.out.println("connected");
 		}
 		else {
 			System.out.println("not connected");
 		}
-		con.close();
+		return con;
+	
 		
-/*		PreparedStatement ps = con.prepareStatement("INSERT INTO docter(docterID,docterName) VALUES(?,?)");// this will create statement objects to insert values into tables
-		
-		int status =ps.executeUpdate();//executeUpdate will do all operations of DDL
-		if(status!=0)
-		{
-			System.out.println("connected");
-		}*/
+
 		
 
 	}
