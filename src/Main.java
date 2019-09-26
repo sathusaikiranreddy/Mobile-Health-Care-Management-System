@@ -5,7 +5,7 @@ public class Main   {
 	public static void main(String args[])
 	{
 		Docter sai = new Docter();
-		sai.name = "saikiran";
+	//	sai.name = "saikiran";
 
 		List<Docter> docterList = new ArrayList<Docter>();
 		docterList.add(sai);

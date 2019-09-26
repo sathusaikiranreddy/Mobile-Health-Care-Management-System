@@ -6,17 +6,14 @@ import java.util.Date;
 
 public class Docter extends ConnectDB {
 
-	public String name;
-
-	
-	
-	
-	public  String getName() {
-		return name;
+public Docter()
+{
+	if(available()) {
+	System.out.println("docter is available at "+currentDate());
 	}
-	public  void setName(String name) {
-		this.name = name;
-	}
+	else
+		System.out.println("docter is not available");
+}
 
 	
 	public static String currentDate()

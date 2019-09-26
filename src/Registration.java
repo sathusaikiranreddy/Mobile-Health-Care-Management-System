@@ -2,6 +2,7 @@ import java.util.*;
 import java.sql.*;
 public class Registration {
 	
+//-------------------------------------------------------
 	
 public  Registration() {
 	
@@ -39,7 +40,7 @@ public  Registration() {
 }
 
 
-
+//--------------------------------------------------------
 
 public static boolean passwordlength(String password)
 {
@@ -68,7 +69,7 @@ public static boolean passwordlength(String password)
 
 
 
-
+//-------------------------------------------------------
 
 public static boolean passwordvalidation(String password) {	 
 	
@@ -109,6 +110,7 @@ public static boolean passwordvalidation(String password) {
 	}
 
 
+//-------------------------------------------------------------
 
 public static void databaseRegister(String username, String password,String type,String age,String number)
 {
@@ -127,8 +129,9 @@ public static void databaseRegister(String username, String password,String type
 	if(status >=1)
 	{
 		System.out.println("Registration successful");
-	//Login l = new Login();
-		//l.log();
+		System.out.println("-------------------------");
+	Login l = new Login();
+		l.authentication();
 	}
 	else
 		System.out.println("Registration unsuccessful");
