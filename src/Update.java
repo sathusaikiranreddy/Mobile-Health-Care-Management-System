@@ -28,7 +28,7 @@ public class Update {
 		String newname = sc.nextLine();	
 		View v = new View();
 		v.display();
-		String str = "UPDATE user SET name=? WHERE name =?";
+		String str = "UPDATE user SET name="+newname+" WHERE name ="+oldname;
 		PreparedStatement ps = d.con.prepareStatement(str);
 		ps.setString(1, newname);
 		ps.setString(1, oldname);

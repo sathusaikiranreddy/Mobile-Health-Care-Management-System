@@ -6,10 +6,13 @@ import java.util.Date;
 
 public class Docter extends ConnectDB {
 
+	
 public Docter()
 {
 	if(available()) {
 	System.out.println("docter is available at "+currentDate());
+	Patient p = new Patient();
+	p.appointment();
 	}
 	else
 		System.out.println("docter is not available");
@@ -38,5 +41,6 @@ public Docter()
 			return false;
 		}
 	}
+
 
 }

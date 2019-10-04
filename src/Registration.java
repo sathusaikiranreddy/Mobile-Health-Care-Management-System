@@ -19,10 +19,23 @@ public  Registration() {
 	{
 		
 		System.out.println("Strong password");
-		System.out.println("docter or patient");
-		String type = sc.nextLine();
+		System.out.println("enter your category");
+		//String type = sc.nextLine();
+		String type=category();
 		System.out.println("enter u r age");
-		String age = sc.nextLine();
+		int ag = sc.nextInt();
+		sc.hasNextLine();
+		String age ="";
+		if(ag > 0 & ag <100)
+		{
+			age = Integer.toString(ag);
+		}
+		else
+		{
+			System.out.println("Invalid age");
+			return;
+		}
+		sc.nextLine();
 		System.out.println("enter u r phone number");
 		String number = sc.nextLine();
 		databaseRegister(username,password,type,age,number);
@@ -111,6 +124,23 @@ public static boolean passwordvalidation(String password) {
 
 
 //-------------------------------------------------------------
+public static String category()
+{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("1->docter \n2->patient\n3->lab admin \n4->pharmacisits");
+	int t = sc.nextInt();
+	sc.nextLine();
+	if(t==1)
+	return "docter";
+	else if(t==2)
+		return "patient";
+	else if(t==3)
+		return "lab admin";
+	else
+		return "pharmacists";
+	
+	
+}
 
 public static void databaseRegister(String username, String password,String type,String age,String number)
 {

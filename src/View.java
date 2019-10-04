@@ -9,7 +9,7 @@ public class View {
 		String str = "SELECT * FROM user";
 		Statement st = d.con.createStatement();
 		ResultSet rs = st.executeQuery(str);
-		System.out.println("NMAE      CATEGORY      AGE        PHONENUMBER");
+		System.out.println("NAME\tCATEGORY      AGE        PHONENUMBER");
 		while(rs.next())
 		{
 			System.out.println(rs.getString(1)+"  "+rs.getString(3)+"        "+rs.getString(4)+"         "+rs.getString(5));
